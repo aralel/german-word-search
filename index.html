@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>German Word Search — learn der, die, das by playing</title>
+<meta name="description" content="A word search puzzle that teaches German noun genders. Find the word, name its article, keep the points. A1 to C2, 20+ themes, on iPhone, iPad and Android.">
+<meta property="og:title" content="German Word Search">
+<meta property="og:description" content="A word search puzzle that teaches German noun genders. Find the word, name its article, keep the points.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect x=%271%27 y=%271%27 width=%2730%27 height=%2730%27 rx=%276%27 fill=%27%23f5deb3%27 stroke=%27%238d6e63%27 stroke-width=%272%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-family=%27Georgia,serif%27 font-size=%2719%27 font-weight=%27bold%27 text-anchor=%27middle%27 fill=%27%233e2723%27%3EW%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">W</span>
+      German Word Search
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="flag-rule" aria-hidden="true"><span></span><span></span><span></span></div>
+        <h1>Every German noun has a gender. <em>Only one way to learn them.</em></h1>
+        <p class="lede">
+          Repetition, but the kind you'll actually come back to. Find a word hidden in the grid,
+          then say whether it's <strong>der</strong>, <strong>die</strong> or <strong>das</strong>.
+          Guess wrong and the points go away — so the article is the part you remember.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn--primary" href="https://apps.apple.com/us/app/ace-german-word-search/id6813417610">Download for iPhone &amp; iPad</a>
+          <a class="btn btn--ghost" href="https://play.google.com/store/apps/details?id=com.aralel.german_word_search">Get it on Android</a>
+        </div>
+        <p class="note">Free to play. Levels A1 and A2 included — B1 to C2 unlock with Premium.</p>
+      </div>
+
+      <!-- The hero is the game itself, at 6×6 with one word hidden in it. -->
+      <div class="demo">
+        <div class="demo-head">
+          <span class="demo-title">Find <strong>HAUS</strong></span>
+          <span class="demo-score" id="demo-score">0 points</span>
+        </div>
+        <div class="tile-grid" id="demo-grid" role="group" aria-label="Word search demo grid"></div>
+        <div class="demo-prompt" id="demo-prompt" role="status" aria-live="polite">
+          Tap the letters, in order, to spell the word.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">One round</span>
+        <h2>Find it, name it, keep it</h2>
+        <p>Every word you find puts the same question in front of you, which is how the genders end up sticking.</p>
+      </div>
+      <ol class="round">
+        <li>
+          <h3>Find the word</h3>
+          <p>Drag or tap across the grid. Words run horizontally, vertically and diagonally, and in both directions.</p>
+        </li>
+        <li>
+          <h3>Name its article</h3>
+          <p>Der, die or das — and for some words, the plural instead. The word is read aloud in German while you decide.</p>
+        </li>
+        <li>
+          <h3>Keep the points</h3>
+          <p>Each letter scores its German Scrabble value. Correct articles keep the points; wrong ones keep the word on the board.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="levels">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Vocabulary that fits you</span>
+        <h2>Six levels, from first words to rare ones</h2>
+        <p>Pick your level on the CEFR scale and the word pool follows it — a B1 puzzle draws on A1, A2 and B1 words, so nothing you've learned disappears.</p>
+      </div>
+      <div class="levels">
+        <div class="level" data-level="a1"><b>A1</b><span>Everyday words</span></div>
+        <div class="level" data-level="a2"><b>A2</b><span>Common words</span></div>
+        <div class="level" data-level="b1"><b>B1</b><span>General contexts</span></div>
+        <div class="level" data-level="b2"><b>B2</b><span>Broader vocabulary</span></div>
+        <div class="level" data-level="c1"><b>C1</b><span>Specialised</span></div>
+        <div class="level" data-level="c2"><b>C2</b><span>Rare and technical</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">What's in it</span>
+        <h2>Built to be played daily</h2>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <h3>20+ themed word sets</h3>
+          <p>Home, food, travel, work, health, school, history, maths, computing and more — nouns grouped the way you meet them.</p>
+        </div>
+        <div class="feature">
+          <h3>A puzzle a day</h3>
+          <p>One featured theme rotates daily, with a streak counter that only asks you for a few minutes.</p>
+        </div>
+        <div class="feature">
+          <h3>Vocabulary notebook</h3>
+          <p>Every article you answer schedules that word for review on a Leitner spaced-repetition system, so it comes back right before you'd forget it.</p>
+        </div>
+        <div class="feature">
+          <h3>Your weak spots, listed</h3>
+          <p>The progress screen ranks the words you get wrong most often, so practice goes where it's needed.</p>
+        </div>
+        <div class="feature">
+          <h3>Meanings in your language</h3>
+          <p>Each word is translated into any of fifteen languages and read aloud, in German and in your own.</p>
+        </div>
+        <div class="feature">
+          <h3>Hints when you're stuck</h3>
+          <p>Reveal a word's first letter — free with Premium, or by watching a short ad.</p>
+        </div>
+        <div class="feature">
+          <h3>Three grid sizes</h3>
+          <p>6×6 with 10 words, 8×8 with 15, or 10×10 with 20 — a quick round or a long one.</p>
+        </div>
+        <div class="feature">
+          <h3>Leaderboard and achievements</h3>
+          <p>Game Center on iOS, Play Games on Android, with sixteen achievements to work through.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="screens">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">In the app</span>
+        <h2>What it looks like</h2>
+      </div>
+      <div class="shots">
+        <figure>
+          <img src="images/levels.png" alt="The start screen, showing the daily puzzle card and the six CEFR level cards from A1 to C2." width="736" height="1600" loading="lazy">
+          <figcaption>Start on the level that matches your German.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/grid.png" alt="A game in progress: a 6 by 6 grid of Scrabble-style letter tiles above the list of words still to find." width="736" height="1600" loading="lazy">
+          <figcaption>Scrabble-style tiles, each letter carrying its German point value.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/themes.png" alt="The theme picker, showing twelve illustrated theme cards including Beruf, Mathematik, Kunst and Reisen." width="736" height="1600" loading="lazy">
+          <figcaption>Pick a theme, or let the app surprise you.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="wrap">
+      <div class="flag-rule" aria-hidden="true"><span></span><span></span><span></span></div>
+      <h2>Start with der, die and das today</h2>
+      <p class="note">Free on iPhone, iPad and Android. No account needed — open it and play.</p>
+      <div class="cta-row">
+        <a class="btn btn--primary" href="https://apps.apple.com/us/app/ace-german-word-search/id6813417610">Download for iPhone &amp; iPad</a>
+        <a class="btn btn--ghost" href="https://play.google.com/store/apps/details?id=com.aralel.german_word_search">Get it on Android</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span id="year">2026</span> <span class="placeholder">Aralel GmbH</span></span>
+    <nav aria-label="Legal and support">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="support.html">Support</a>
+      <a href="mailto:support@aralel.com">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // German Scrabble letter values — the same table the app scores with (ScoringEngine).
+  const LETTER_POINTS = {
+    E:1, N:1, S:1, I:1, R:1, T:1, U:1, A:1, D:1,
+    H:2, G:2, L:2, O:2,
+    M:3, B:3, W:3, Z:3,
+    C:4, F:4, K:4, P:4,
+    "Ä":6, J:6, "Ü":6, V:6,
+    "Ö":8, X:8,
+    Q:10, Y:10
+  };
+  const pointsFor = (letter) => LETTER_POINTS[letter] ?? 1;
+
+  const ROWS = [
+    ["M","Ä","R","T","E","N"],
+    ["B","L","I","C","K","O"],
+    ["Z","H","A","U","S","W"],
+    ["G","Ö","F","R","E","D"],
+    ["P","I","N","S","T","Ü"],
+    ["K","E","L","M","B","Ä"]
+  ];
+  const TARGET = "HAUS";
+  const CORRECT_ARTICLE = "das";
+
+  const gridEl = document.getElementById("demo-grid");
+  const promptEl = document.getElementById("demo-prompt");
+  const scoreEl = document.getElementById("demo-score");
+
+  let selection = [];
+  let solved = false;
+
+  ROWS.forEach((row, rowIndex) => {
+    row.forEach((letter, columnIndex) => {
+      const tile = document.createElement("button");
+      tile.type = "button";
+      tile.className = "tile";
+      tile.id = "tile-" + rowIndex + "-" + columnIndex;
+      tile.dataset.letter = letter;
+      tile.setAttribute("aria-pressed", "false");
+      tile.setAttribute("aria-label", letter + ", " + pointsFor(letter) + " points");
+      tile.innerHTML = letter + '<span class="pts" aria-hidden="true">' + pointsFor(letter) + "</span>";
+      tile.addEventListener("click", () => toggleTile(tile));
+      gridEl.appendChild(tile);
+    });
+  });
+
+  function toggleTile(tile) {
+    if (solved) return;
+    const alreadyAt = selection.indexOf(tile);
+    if (alreadyAt > -1) {
+      selection.splice(alreadyAt, 1);
+      tile.setAttribute("aria-pressed", "false");
+    } else {
+      selection.push(tile);
+      tile.setAttribute("aria-pressed", "true");
+    }
+    const spelled = selection.map((t) => t.dataset.letter).join("");
+    if (spelled === TARGET || spelled === [...TARGET].reverse().join("")) {
+      askArticle();
+    } else if (spelled.length >= TARGET.length) {
+      promptEl.textContent = "Not quite — tap the selected tiles again to clear them.";
+    } else {
+      promptEl.textContent = spelled ? "Selected: " + spelled : "Tap the letters, in order, to spell the word.";
+    }
+  }
+
+  function askArticle() {
+    solved = true;
+    promptEl.innerHTML = "<strong>HAUS</strong> — which article?";
+    ["der", "die", "das"].forEach((article) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "article-btn";
+      button.dataset.article = article;
+      button.textContent = article;
+      button.addEventListener("click", () => answer(article));
+      promptEl.appendChild(button);
+    });
+  }
+
+  function answer(article) {
+    const isCorrect = article === CORRECT_ARTICLE;
+    const wordScore = [...TARGET].reduce((total, letter) => total + pointsFor(letter), 0);
+    selection.forEach((tile) => {
+      tile.classList.add("is-found");
+      tile.setAttribute("aria-pressed", "false");
+    });
+    if (isCorrect) {
+      scoreEl.textContent = wordScore + " points";
+      promptEl.innerHTML =
+        '<span class="verdict verdict--right">Richtig!</span> <strong>das Haus</strong> — the house. ' +
+        "+" + wordScore + " points.";
+    } else {
+      promptEl.innerHTML =
+        '<span class="verdict verdict--wrong">Falsch.</span> It\'s <strong>das Haus</strong>. ' +
+        "In the app, a wrong article scores nothing and the word stays on the board.";
+    }
+    const replay = document.createElement("button");
+    replay.type = "button";
+    replay.className = "btn btn--ghost";
+    replay.style.padding = "7px 14px";
+    replay.style.fontSize = "0.9rem";
+    replay.textContent = "Play again";
+    replay.addEventListener("click", reset);
+    promptEl.appendChild(replay);
+  }
+
+  function reset() {
+    solved = false;
+    selection = [];
+    scoreEl.textContent = "0 points";
+    gridEl.querySelectorAll(".tile").forEach((tile) => {
+      tile.classList.remove("is-found");
+      tile.setAttribute("aria-pressed", "false");
+    });
+    promptEl.textContent = "Tap the letters, in order, to spell the word.";
+  }
+</script>
+
+</body>
+</html>
